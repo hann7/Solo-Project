@@ -1,6 +1,6 @@
 const alpha = require('alphavantage')({ key: 'key' }); //need to store key somewhere else for security
 const apiURL = 'https://www.alphavantage.co/query?'; 
-//concat apiURL + 'function=TIME_SERIES_DAILY&symbol=(user inputted symbol)&interval=60min&apikey=5WM3L2DUA1FTQ0VT'
+//concat apiURL + 'function=TIME_SERIES_DAILY&symbol=(user inputted symbol)&interval=60min&apikey=(key)'
 
 const apiController = {};
 
