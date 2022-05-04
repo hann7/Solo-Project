@@ -2,16 +2,18 @@
   "name": "solo-project",
   "version": "1.0.0",
   "description": "let's goooo",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve  --hot --open",
-    "build": "webpack --config webpack.config.js --mode production"
+    "start": "nodemon server.js",
+    "dev": "webpack serve  --hot --open && nodemon server.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "hann7",
   "license": "ISC",
   "dependencies": {
+    "alphavantage": "^2.3.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
     "bootstrap": "^5.1.3",

@@ -1,4 +1,26 @@
 body {
   background-color: rgb(57, 63, 70);
   color: rgb(193, 226, 255);
+  margin: 10px;
+}
+#search-bar {
+  width: 500px;
+  height: 24px;
+  border-color: rgb(193, 226, 255);
+  border-style: solid;
+  color: rgb(193, 226, 255);
+  background-color: rgb(57, 63, 70);
+  border-radius: 3px;
+  margin: 10px;
+  padding: 10px;
+}
+#search-button {
+  height: 30px;
+  width: 100px;
+  border-style: solid;
+  border-color: rgb(193, 226, 255);
+  color: rgb(193, 226, 255);
+  background-color: rgb(57, 63, 70);
+  border-radius: 3px;
+  margin: 10px;
 }

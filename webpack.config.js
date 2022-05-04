@@ -9,8 +9,14 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    static: path.join(__dirname, 'public')
+    static: path.join(__dirname, 'public'),
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        pathRewrite: { '^/api': '' }
+      }
     },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html",
