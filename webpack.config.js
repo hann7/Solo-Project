@@ -2,14 +2,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: "./app.js",
+  entry: "./main.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "build"),
   },
   mode: 'development',
   devServer: {
-    static: path.join(__dirname, 'public'),
     proxy: {
       '/api': {
         target: 'http://localhost:3000',

@@ -1,7 +1,7 @@
 body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(57, 63, 70);
   color: rgb(193, 226, 255);
-  margin: 10px;
 }
 #search-bar {
   width: 500px;
@@ -23,4 +23,14 @@ body {
   background-color: rgb(57, 63, 70);
   border-radius: 3px;
   margin: 10px;
+}
+a {
+  text-decoration: underline;
+  color: rgb(193, 226, 255);
+}
+a:hover {
+  color: rgb(106, 154, 196);
+}
+.linebreak {
+  border-color: rgb(193, 226, 255);
 }

@@ -6,15 +6,15 @@ const apiController = require('./api-controller')
 
 
 //will need routes for landing page and page for search result
-app.get('/api/search', apiController.search, (req, res) => {
+app.get('/search/:id', apiController.search, (req, res) => {
   console.log('Search works!');
-  return res.send('Search works!'); //maybe have a second react page to redirect to
+  return res.send(res.locals.data); //maybe have a second react page to redirect to
 });
 
-app.get('/api/homepage', apiController.landing, (req, res) => {
-  console.log('homepage');
-  return res.send('homepage!'); //get request from front end to populate landing page data
-});
+// app.get('/homepage', apiController.landing, (req, res) => {
+//   console.log('homepage');
+//   return res.send('homepage!'); //get request from front end to populate landing page data
+// });
 
 
 //listening on port 3000
