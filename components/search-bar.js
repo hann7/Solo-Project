@@ -1,12 +1,14 @@
 import React from 'react';
 import Display from './display-card'
+import Recents from './recents'
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
       input: '',
-      data: []
+      data: [], 
+      recents: []
   }
     this.displayData = this.displayData.bind(this);
     this.updateInput = this.updateInput.bind(this);
@@ -14,10 +16,11 @@ class Search extends React.Component {
   
   displayData () {
     const ticker = this.state.input;
+    this.state.recents.push(ticker)
     fetch(`/api/search/${ticker}`)
       .then(res => res.json())
       .then(data => {
-          this.setState({data})
+          this.setState({ data })
       })
       .catch(err => console.log('error displaying req data: ' + err));
   }
@@ -29,11 +32,10 @@ class Search extends React.Component {
   render() {
     return (
       <div>
+        <Recents recents={this.state.recents}/>
         <h2>Search</h2>
-        {/* <form> */}
           <input value={this.state.userInput} onChange={this.updateInput} id="search-bar" type="text" placeholder="Start typing..."></input>
           <button onClick={this.displayData} id="search-button" type="submit">Search</button>
-        {/* </form> */}
         <Display data={this.state.data} />
       </div>
     )

@@ -1,12 +1,14 @@
 import React from 'react';
 import Search from './components/search-bar.js'
 import { Routes, Route, Outlet, Link } from "react-router-dom";
+import Recents from './components/recents.js'
 
 function App() {
   return (
     <div>
       <h1>Here, look at a kitten while I code this thing</h1>
       <img src="https://placekitten.com/200/138"/>
+      <hr className="linebreak" />
 
       {/* Routes nest inside one another. Nested route paths build upon
             parent route paths, and nested route elements render inside
@@ -55,6 +57,12 @@ function Home() {
   return (
     <div>
       <h2>Home</h2>
+      <p>Welcome to my super fun and cool app!<br></br>You can search any stonks and find the latest price data<br></br>Please view kitties while you wait for demo!</p>
+      <img src ="https://placekitten.com/500/400"/>
+      <img src ="https://placekitten.com/600/400"/>
+      <img src ="https://placekitten.com/600/500"/>
+      <img src ="https://placekitten.com/400/500"/>
+      <img src ="https://placekitten.com/500/600"/>
     </div>
   );
 }
